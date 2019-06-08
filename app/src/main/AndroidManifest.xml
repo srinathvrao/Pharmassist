@@ -12,19 +12,51 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Maps">
+            <intent-filter>
+                <action android:name="org.example.MY_ACTION_INTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE" />
+            </intent-filter>
+        </activity>
         <activity android:name=".UserLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.default" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" /> <!-- <activity android:name=".MedicineRecognised" /> -->
-        <!-- <activity android:name=".DoctorUploadMeds" /> -->
-        <activity android:name=".doctor_log_in" />
+        <activity android:name=".MedicineRecognised" />
+        <activity android:name=".DoctorUploadMeds" />
+        <activity android:name=".DoctorLogIn" />
+        <activity
+            android:name=".DoctorHome"
+            android:label="@string/title_activity_doctor_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PatientHome"
+            android:label="@string/title_activity_patient_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+            <activity
+            android:name=".UserLogin"
+            android:label="@string/title_activity_user_login"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        -->
+        <activity android:name=".Register" />
+        <activity android:name=".TabletDetails" />
+        <activity android:name=".ConsumedActivity" />
     </application>
 
 </manifest>

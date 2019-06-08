@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class doctor_log_in extends AppCompatActivity {
+public class DoctorLogIn extends AppCompatActivity {
     private EditText dEmail;
     private EditText dPassword;
     private Button dLogIn;
