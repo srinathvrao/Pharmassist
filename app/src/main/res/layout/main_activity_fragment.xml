@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_activity_fragment_layout"
-    android:background="#ffffff">
+    android:background="#f5f5f5">
 
     <!-- <com.example.pharmassist.MultiToucnView
         android:layout_width="match_parent"
@@ -26,31 +26,30 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/bg"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:src="@drawable/red_steth"
             android:visibility="visible"
-            android:alpha="0.5"/>
+            android:layout_gravity="center"/>
 
         <TextView
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Place medicine here"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:textColor="#d50000"/>
 
     </LinearLayout>
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log Out"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/form_submit_button"
-        android:alpha="0.8"/>
+        android:background="@drawable/logout_red" />
 
 </RelativeLayout>

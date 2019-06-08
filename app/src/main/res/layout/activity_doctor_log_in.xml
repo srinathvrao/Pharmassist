@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#000000"
+    android:background="#f5f5f5"
     android:layout_height="match_parent"
     tools:context=".DoctorLogIn">
 
 
     <ImageView
         android:layout_above="@id/linear"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/bg_white"/>
+        android:src="@drawable/red_steth"/>
 
 
     <LinearLayout
@@ -31,17 +31,18 @@
             android:id="@+id/docL"
             android:layout_above="@+id/Email"
             android:textSize="32dp"
-            android:text="Doctor Login"
+            android:text="DOCTOR LOGIN"
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="15dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#d50000"
             android:textAlignment="center"
             android:layout_gravity="center"/>
 
         <EditText
             android:id="@+id/DEmail"
-            android:textColor="#EEEEEE"
+            android:textColor="#d50000"
             android:layout_width="match_parent"
+            android:outlineAmbientShadowColor="#d50000"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
@@ -50,7 +51,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/TVUL"
             android:hint="Enter Email"
-            android:textColorHint="#929292"
+            android:textColorHint="#d50000"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -61,7 +62,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="25dp"
-            android:textColorHint="#929292"
+            android:textColorHint="#d50000"
             android:hint="Enter Password"
             android:layout_below="@+id/Email"
             android:layout_above="@+id/BSignin"
@@ -77,7 +78,7 @@
             android:layout_gravity="center"
             android:text="Sign In"
 
-            android:textColor="#FFFFFF"
+            android:textColor="#f5f5f5"
             android:background="@drawable/form_submit_button_doctor"/>
 
     </LinearLayout>

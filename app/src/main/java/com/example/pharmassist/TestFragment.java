@@ -57,7 +57,8 @@ public class TestFragment extends Fragment {
             if(matches.contains("pharmacy")) {
                 //Intent intent = new Intent(getContext(),Maps.class);
                 Log.i("voice result","matched");
-                startActivity(new Intent("org.example.MY_ACTION_INTENT"));
+                //startActivity(new Intent("org.example.MY_ACTION_INTENT"));
+                startActivity(new Intent(getContext(),MapsActivity.class));
             }
         }
     }

@@ -113,6 +113,16 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.main_activity_fragment,container,false);
 
+        Button logoutButton = (Button) rootView.findViewById(R.id.logout);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.firebaseAuth.signOut();
+                tts.stop();
+                startActivity(new Intent(getContext(),UserLogin.class));
+            }
+        });
+
 
         /*RelativeLayout layout = (RelativeLayout) rootView.findViewById(R.id.main_activity_fragment_layout);
         layout.setOnTouchListener(new View.OnTouchListener() {

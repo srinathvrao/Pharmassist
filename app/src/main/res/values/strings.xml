@@ -3,4 +3,5 @@
     <string name="title_activity_doctor_home">DoctorHome</string>
     <string name="title_activity_patient_home">PatientHome</string>
     <string name="title_activity_user_login">UserLogin</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

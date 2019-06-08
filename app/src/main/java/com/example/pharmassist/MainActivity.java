@@ -1,5 +1,6 @@
 package com.example.pharmassist;
 
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NdefMessage;
@@ -19,6 +20,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity /*implements NfcAdapter.Crea
     ArrayList<Integer> selectiedPoints = new ArrayList<>();
     GestureDetector gestureDetector;
 
-    FirebaseAuth firebaseAuth;
+    static FirebaseAuth firebaseAuth;
 
     static public TextToSpeech tts;
 
@@ -73,6 +75,11 @@ public class MainActivity extends AppCompatActivity /*implements NfcAdapter.Crea
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i("sensor",String.valueOf(sensorFlag));
+
+        //Window window = new Activity().getWindow();
+
+        //window.setStatusBarColor();
+
 
         //logout = (Button) findViewById(R.id.logout);
         firebaseAuth = FirebaseAuth.getInstance();
