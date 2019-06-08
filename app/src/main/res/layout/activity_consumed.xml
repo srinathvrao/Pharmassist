@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsumedActivity"
+    android:background="#EEEEEE">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Did you consume the pill?"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:id="@+id/ConsumeText"
+            android:textSize="30dp"
+            />
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ConsumeText">
+            <Button
+                android:layout_width="100dp"
+                android:id="@+id/yesButton"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_check_circle_black_24dp"
+                android:textSize="50dp"
+                android:layout_margin="25dp"
+                android:layout_marginLeft="35dp"
+                android:shadowColor="@color/colorPrimary"
+                />
+            <Button
+                android:layout_width="100dp"
+                android:id="@+id/noButton"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_block_black_24dp"
+                android:textSize="50dp"
+                android:layout_margin="25dp"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

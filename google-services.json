@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "1027512958584",
+    "firebase_url": "https://pharmassist-bc2e5.firebaseio.com",
+    "project_id": "pharmassist-bc2e5",
+    "storage_bucket": "pharmassist-bc2e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027512958584:android:3741eca6e9a0fe41",
+        "android_client_info": {
+          "package_name": "com.example.pharmassist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027512958584-s46c7094mug2qn4rajab39rf49o1h418.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pharmassist",
+            "certificate_hash": "a7b48a856a0f9b293ce11f09232f436c61e772a4"
+          }
+        },
+        {
+          "client_id": "1027512958584-d1s68q3kbiio6b8f3s7upgup7p85tka3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCegVg8oZkUHxnX5x9JTnlVrf6lXjl74fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027512958584-d1s68q3kbiio6b8f3s7upgup7p85tka3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027512958584:android:c25785a00c6ea517",
+        "android_client_info": {
+          "package_name": "com.example.sai.pharmassist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027512958584-a9e812rui7tdbri6pkg1ldnf39p6uvet.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sai.pharmassist",
+            "certificate_hash": "7339a3c4acb298ae24c684d17c6a50da23a64963"
+          }
+        },
+        {
+          "client_id": "1027512958584-d1s68q3kbiio6b8f3s7upgup7p85tka3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCegVg8oZkUHxnX5x9JTnlVrf6lXjl74fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027512958584-d1s68q3kbiio6b8f3s7upgup7p85tka3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027512958584:android:b0a7b7b8e2293c7d",
+        "android_client_info": {
+          "package_name": "com.example.srina.pharmassist2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027512958584-m2rpat1b0ts6jtkdpc6246ti3e0kaf07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.srina.pharmassist2",
+            "certificate_hash": "54c46a99bf69a313359ca7143f52084e9e51b3ff"
+          }
+        },
+        {
+          "client_id": "1027512958584-d1s68q3kbiio6b8f3s7upgup7p85tka3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCegVg8oZkUHxnX5x9JTnlVrf6lXjl74fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027512958584-d1s68q3kbiio6b8f3s7upgup7p85tka3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
