@@ -9,6 +9,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a" // DO NOT MODIFY THIS LINE, IT'S UPDATED BY BUILD MACHINE AUTOMATICALLY.
+        }
     }
     buildTypes {
         release {
@@ -36,7 +40,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-basement:16.0.1'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
 
-    implementation 'io.agora.rtc:full-sdk:2.4.0'
+    //implementation 'io.agora.rtc:full-sdk:2.4.0'
+    implementation project(path: ':raw-data-api-java')
 
 
 }

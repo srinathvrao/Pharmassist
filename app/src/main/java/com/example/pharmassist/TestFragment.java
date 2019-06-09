@@ -2,6 +2,7 @@ package com.example.pharmassist;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -30,7 +31,7 @@ public class TestFragment extends Fragment {
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                     RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
             intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
-                    "Speech recognition demo");
+                    "PHARMASSIST");
             startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
 
         }
