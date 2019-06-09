@@ -2,6 +2,8 @@ package com.example.pharmassist;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +25,10 @@ import com.google.firebase.database.ValueEventListener;
 
 public class DoctorHome extends AppCompatActivity {
 
+    static Handler handler;
+    static Runnable runnable;
+    static boolean flag = false;
+
     private int check=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,49 @@ public class DoctorHome extends AppCompatActivity {
         Button logout = (Button) findViewById(R.id.dlogout);
 
         String puid="";
+
+
+
+        handler = new Handler();
+
+        handler.postDelayed(runnable = new Runnable() {
+            @Override
+            public void run() {
+
+                Log.i("runnablehandler","inside");
+
+                FirebaseDatabase.getInstance().getReference().child("Doctors/" + FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            //Tablet t = snapshot.getValue(Tablet.class);
+
+                            //Log.i("docchannelid",snapshot.toString());
+
+                            if(snapshot.getKey().equals("call") && !snapshot.getValue().equals("string")) {
+                                String channelname = (String) snapshot.getValue();
+                                Log.i("channelid",channelname);
+                                Intent intent = new Intent(getApplicationContext(),DoctorCallView.class);
+                                intent.putExtra("channelname",channelname);
+                                flag = true;
+                                //handler.removeCallbacks(runnable);
+                                startActivity(intent);
+                            }
+                        }
+                        handler.postDelayed(runnable,1000);
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        },1000);
+
+
 
         final DatabaseReference dbref = FirebaseDatabase.getInstance().getReference();
 

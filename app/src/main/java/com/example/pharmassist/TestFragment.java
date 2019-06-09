@@ -60,6 +60,9 @@ public class TestFragment extends Fragment {
                 //startActivity(new Intent("org.example.MY_ACTION_INTENT"));
                 startActivity(new Intent(getContext(),MapsActivity.class));
             }
+            else if(matches.contains("call doctor")) {
+                startActivity(new Intent(getContext(),VideoChatViewActivity.class));
+            }
         }
     }
 }
