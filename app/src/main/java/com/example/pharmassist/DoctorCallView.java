@@ -65,7 +65,7 @@ public class DoctorCallView extends AppCompatActivity {
     private double SamplingFreq;
     public int Beats=0;
     public double Q =4.5;
-    public double Wei=0, Agg=0,Hei=0;
+    public double Wei=60, Agg=20,Hei=162;
     private static int SP = 0, DP = 0;
     public double bufferAvgB=0;
     private static final AtomicBoolean processing = new AtomicBoolean(false);
@@ -398,8 +398,8 @@ public class DoctorCallView extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                sp.setText("SP: " + String.valueOf(SP));
-                bp.setText("BP: " + String.valueOf(DP));
+                sp.setText("SYS: " + String.valueOf(SP));
+                bp.setText("DIA: " + String.valueOf(DP));
                 bpm.setText("BPM: " + String.valueOf(Beats));
             }
         });
