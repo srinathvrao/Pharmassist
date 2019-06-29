@@ -1,10 +1,14 @@
 package com.example.pharmassist;
 
+import com.example.pharmassist.Math.*;
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,6 +20,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,6 +30,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import io.agora.rtc.Constants;
 import io.agora.rtc.IRtcEngineEventHandler;
@@ -37,10 +47,13 @@ import io.agora.rtc.video.VideoCanvas;
 
 import io.agora.rtc.video.VideoEncoderConfiguration; // 2.3.0 and later
 
-
+import static java.lang.Math.ceil;
 
 
 public class VideoChatViewActivity extends AppCompatActivity implements MediaDataAudioObserver, MediaDataVideoObserver {
+
+
+
 
     @Override
     public void onRecordAudioFrame(byte[] data, int audioFrameType, int samples, int bytesPerSample, int channels, int samplesPerSec, long renderTimeMs, int bufferLength) {
@@ -72,15 +85,9 @@ public class VideoChatViewActivity extends AppCompatActivity implements MediaDat
 
     }
 
-    class SavePics extends AsyncTask<Void,Void,Void> {
-        @Override
-        protected Void doInBackground(Void... voids) {
-            Log.i("asynctask save","before");
-            mediaDataObserverPlugin.saveCaptureVideoSnapshot("/sdcard/raw-data-test/capture" + count + ".jpg");
-            Log.i("asynctask save","after");
-            return null;
-        }
-    }
+
+
+
 
     String doctoruid;
 
@@ -246,7 +253,6 @@ public class VideoChatViewActivity extends AppCompatActivity implements MediaDat
 
     public void onEncCallClicked(View view) {
 
-
         FirebaseDatabase.getInstance().getReference().child("Doctors/" + doctoruid).child("call").setValue("string");
 
 
@@ -300,17 +306,9 @@ public class VideoChatViewActivity extends AppCompatActivity implements MediaDat
                         doctoruid = (String) snapshot.getValue();
                         mRtcEngine.joinChannel(null, channelname, "Extra Optional Data", 0); // if you do not specify the uid, we will generate the uid for you
 
+                        //mediaDataObserverPlugin.saveCaptureVideoSnapshot("/sdcard/raw-data-test/capture" + count + ".jpg");
 
-                        handler = new Handler();
-                        handler.postDelayed(runnable = new Runnable() {
-                            @Override
-                            public void run() {
-                                Log.i("savepics","handler running");
-                                SavePics savePics = new SavePics();
-                                savePics.execute();
 
-                            }
-                        },5000);
 
 
                     }
@@ -575,7 +573,7 @@ public class VideoChatViewActivity extends AppCompatActivity implements MediaDat
         mRtcEngine.switchCamera();
     }
 
-    public void onEncCallClicked(View view) {
+    public void onEncCallClickecd(View view) {
 
         vidchat = false;
         FirebaseDatabase.getInstance().getReference().child("Doctors/" + doctoruid).child("call").setValue("string");

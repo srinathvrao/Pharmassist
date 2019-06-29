@@ -62,6 +62,7 @@
 
             <ImageView
                 android:layout_width="0dp"
+                android:id="@+id/endcall"
                 android:layout_height="match_parent"
                 android:layout_weight="20"
                 android:onClick="onEncCallClicked"

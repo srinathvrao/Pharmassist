@@ -39,7 +39,7 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-basement:16.0.1'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
-
+    implementation files('C:\\Users\\shrad\\Desktop\\PharmAssist\\lib\\commons-math3-3.6.1.jar')
     //implementation 'io.agora.rtc:full-sdk:2.4.0'
     implementation project(path: ':raw-data-api-java')
 

@@ -55,7 +55,7 @@ public class TestFragment extends Fragment {
         if(requestCode == VOICE_RECOGNITION_REQUEST_CODE && resultCode == RESULT_OK) {
             ArrayList matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
             Log.i("VOICE RESULT",matches.get(0).toString());
-            if(matches.contains("pharmacy")) {
+            if(matches.contains("find pharmacies near me")) {
                 //Intent intent = new Intent(getContext(),Maps.class);
                 Log.i("voice result","matched");
                 //startActivity(new Intent("org.example.MY_ACTION_INTENT"));
